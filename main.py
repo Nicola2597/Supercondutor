@@ -428,6 +428,7 @@ fig8.show()
 #no need for pruning in random forest because,Roughly speaking, some of the potential over-fitting that might happen in a single tree (which is a reason you do pruning generally) is mitigated by two things in a Random Forest:
 #The fact that the samples used to train the individual trees are "bootstrapped".
 #The fact that you have a multitude of random trees using random features and thus the individual trees are strong but not so correlated with each other.
+
 def objectiverandom(trial):
     params = {
         'n_estimators': trial.suggest_int('n_estimators', 10, 1000),
